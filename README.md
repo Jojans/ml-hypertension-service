@@ -1,7 +1,7 @@
-# Hypertension Risk ML Inference Service
+# Hypertension Risk ML Inference Service 🚑🧠
 
-Este microservicio realiza inferencias de riesgo de hipertensión a partir de datos clínicos usando un modelo entrenado con Random Forest y servido con FastAPI.
+Este proyecto es un **microservicio de inferencia de riesgo de hipertensión** basado en un modelo de *Machine Learning (Random Forest)* entrenado con datos clínicos. Utiliza **FastAPI** como framework backend, y una interfaz web con **Jinja2** para interactuar fácilmente con el modelo.
 
-## Estructura
-- `app/`: Código FastAPI (API, esquemas, modelo)
-- `model/`: Archivos del modelo (`.pkl`) generados por `train_model.py` y Dataset original (no se sube a GitHub)
+## 🧠 ¿Qué hace?
+
+A partir de datos del paciente como edad, índice de masa corporal (IMC), nivel de ejercicio, antecedentes familiares, etc., este servicio estima la probabilidad de que una persona tenga hipertensión.

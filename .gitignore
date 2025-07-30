@@ -15,8 +15,8 @@ venv/
 .vscode/
 .idea/
 
-# Datos sensibles o pesados
-model/
+# Datos sensibles
+model/model.pkl
+model/train_model.py
 
 # Otros
-.DS_Store
