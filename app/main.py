@@ -3,6 +3,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from app.model import predict_risk, PatientData
+from prometheus_fastapi_instrumentator import Instrumentator
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -41,3 +42,5 @@ def predict_form(
     )
     result = predict_risk(data)
     return templates.TemplateResponse("form.html", {"request": request, "prediction": result})
+    
+Instrumentator().instrument(app).expose(app, include_in_schema=False)
